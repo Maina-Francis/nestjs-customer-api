@@ -3,11 +3,15 @@ import { CustomersService } from 'src/customers/services/customers/customers.ser
 
 @Controller('customers')
 export class CustomersController {
-  constructor(private customerService: CustomersService) {}
+  constructor(private customersService: CustomersService) {}
 
-  // Get request
+  // Get controller
   @Get()
-  getCustomer() {
-    this.customerService.getAllCustomers();
+  getcustomer() {
+    return {
+      id: 1,
+      email: 'test@gmail.com',
+      createdAt: new Date(),
+    };
   }
 }
