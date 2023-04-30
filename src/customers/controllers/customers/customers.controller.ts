@@ -8,10 +8,6 @@ export class CustomersController {
   // Get controller
   @Get()
   getcustomer() {
-    return {
-      id: 1,
-      email: 'test@gmail.com',
-      createdAt: new Date(),
-    };
+    return this.customersService.findCustomer();
   }
 }
